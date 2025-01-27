@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+info:
+  status: UP
+
+spring:
+  application:
+    name: tareas-ms
+  profiles:
+    active: local
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tareasdb
+    username: postgres
+    password: Ab12345
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+springdoc:
+  swagger-ui:
+    path=/swagger-ui.html
+
